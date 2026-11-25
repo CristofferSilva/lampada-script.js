@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: center;
+  color: #f8fafc;
+  background:
+    radial-gradient(ellipse at 50% 15%, rgba(71, 85, 105, 0.35), transparent 55%),
+    #111827;
+  transition: background 0.5s, color 0.5s;
+}
+
+body.acesa {
+  color: #3b2b13;
+  background:
+    radial-gradient(ellipse at 50% 20%, #fff3c4 0%, #f8e6ae 48%, #e8c982 100%);
+}
+
+.cartao {
+  width: min(100%, 440px);
+  padding: 48px 32px 36px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  background: rgba(30, 41, 59, 0.78);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(12px);
+  transition: background 0.5s, box-shadow 0.5s, border-color 0.5s;
+}
+
+.acesa .cartao {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 251, 235, 0.74);
+  box-shadow: 0 24px 70px rgba(130, 86, 20, 0.17);
+}
+
+.etiqueta {
+  color: #fbbf24;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.acesa .etiqueta {
+  color: #a16207;
+}
+
+h1 {
+  margin: 14px 0 10px;
+  font-size: clamp(1.8rem, 7vw, 2.4rem);
+  letter-spacing: -0.045em;
+}
+
+.descricao {
+  max-width: 300px;
+  margin: 0 auto;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.acesa .descricao {
+  color: #715b37;
+}
+
+.area-lampada {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 176px;
+  height: 176px;
+  margin: 24px auto 20px;
+}
+
+.lampada {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 96px;
+  line-height: 1;
+  filter: grayscale(0.75) brightness(0.75);
+  transition: filter 0.5s, transform 0.5s;
+}
+
+.acesa .lampada {
+  filter: drop-shadow(0 0 18px rgba(255, 190, 43, 0.9));
+  transform: scale(1.06);
+}
+
+.halo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #fbbf24;
+  opacity: 0;
+  filter: blur(36px);
+  transition: opacity 0.5s;
+}
+
+.acesa .halo {
+  opacity: 0.48;
+}
+
+button {
+  min-width: 190px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 999px;
+  background: #fbbf24;
+  color: #422006;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(251, 191, 36, 0.2);
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: #fcd34d;
+  box-shadow: 0 11px 24px rgba(251, 191, 36, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+.aviso {
+  margin: 20px 0 0;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.acesa .aviso {
+  color: #715b37;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 16px;
+  }
+
+  .cartao {
+    padding: 40px 22px 30px;
+  }
+}

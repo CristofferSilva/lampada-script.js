@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Interruptor de luz</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <main class="cartao">
+    <span class="etiqueta">UM TOQUE DE LUZ</span>
+    <h1>Ilumine seu espaço</h1>
+    <p class="descricao">Acenda a lâmpada e transforme o clima da página.</p>
+
+    <div class="area-lampada">
+      <span class="halo" aria-hidden="true"></span>
+      <p id="lampada" class="lampada" role="img" aria-label="Lâmpada apagada">💡</p>
+    </div>
+
+    <button id="interruptor" type="button" aria-pressed="false">Acender a luz</button>
+    <p id="aviso" class="aviso" aria-live="polite">A luz está apagada.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
